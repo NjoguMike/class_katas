@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import ChipList from './Chiplist';
+
 
 function App() {
+
+  const chips = [
+    { label: "123456" },
+    { label: "1234567" },
+    { label: "12345678" },
+    { label: "12345" },
+    { label: "123456789" }
+  ]
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        <ChipList chips={chips} maxChipsDisplayed={3} maxTextLength={6}/>
+      </div>
+      
     </div>
   );
 }
